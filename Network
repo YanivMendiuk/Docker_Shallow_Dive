@@ -1,0 +1,43 @@
+ 2113  docker network create lamp-net
+ 2114  docker run -d --network lamp-net -P 8080
+ 2115  docker ls
+ 2116  docker ps
+ 2117  docker stop 13dda72d50dc bbdd6986c538 7b81b1409761 c1de46afdfdf 66ac5ac021ef
+ 2118  docker container prune 
+ 2119  docker ps
+ 2120  docker run -d --network lamp-net -P 8080
+ 2121  docker run -d --network lamp-net -P 8080 nginx
+ 2122  docker run -d -P 8080 --network lamp-net nginx
+ 2123  docker run -d nginx -P 8080 --network lamp-net 
+ 2124  docker ps
+ 2125  docker run -dit nginx -P 8080 --network lamp-net 
+ 2126  docker ps
+ 2127  docker run -dit nginx
+ 2128  docker ps
+ 2129  dcoker container stop 86f
+ 2130  docker container stop 86f
+ 2131  docker ps
+ 2132  docker run -dit nginx --network lamp-net 
+ 2133  docker ps
+ 2134  docker run -dit nginx
+ 2135  docker ps
+ 2136  docker run -dit nginx -P 8989
+ 2137  docker ps
+ 2138  docker stop eb9e59c35972
+ 2139  docker ps
+ 2140  docker run -dit nginx -P 
+ 2141  docker ps
+ 2142  docker run -dit --name myyy-nginx nginx 
+ 2143  docker ps
+ 2144  docker run -dit --name myyy-nginx nginx -P 8989
+ 2145  docker stop a35079137779
+ 2146  docker run -dit --name myyy-nginx nginx -P 8989
+ 2147  docker run -dit --name mzzzzz-nginx nginx -P 8989
+ 2148  docker ps
+ 2149  docker run -dit --name mzzzzz-nginx -P 8989 nginx 
+ 2150  docker run -dit --name mzzzzz-nginx nginx -p 8989:8989
+ 2151  docker run -d -p 3306:3306 --network lamp-net mysql 
+ 2152  docker ps
+ 2153  docker inspect 2328c9fdfdf2bcb73778fb1fd984218c2023ea1995f0b24ffcabfbe7133f1883
+ 2154  docker inspect 2328c9fdfdf2bcb73778fb1fd984218c2023ea1995f0b24ffcabfbe7133f1883 | grep port
+ 2155  docker inspect 2328c9fdfdf2bcb73778fb1fd984218c2023ea1995f0b24ffcabfbe7133f1883 | grep -i port

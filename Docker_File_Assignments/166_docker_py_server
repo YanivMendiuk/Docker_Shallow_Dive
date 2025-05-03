@@ -1,0 +1,10 @@
+FROM python:3
+LABEL maintainer="yaniv"
+LABEL version="0.0.1"
+LABEL description="Py_Web_Server"
+RUN useradd -m snek 
+WORKDIR /app 
+EXPOSE 8000
+COPY py-web-server.py app.py
+USER snek
+CMD python3 app.py

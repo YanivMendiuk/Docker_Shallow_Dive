@@ -1,0 +1,71 @@
+ 2251  docker ps
+ 2252  ll /var/lib/docker-desktop/
+ 2253  docker -h volumes
+ 2254  docker volumes ls
+ 2255  docker volumes ps
+ 2256  docker volume ls
+ 2257  docker volume create my-s
+ 2258  docker volume ls
+ 2259  docker volume inspect my-s 
+ 2260  cd projects/docker/
+ 2261  kk
+ 2262  ll
+ 2263  mdkir volumes
+ 2264  mkdir volumes
+ 2265  cd volumes/
+ 2266  mkdir storage
+ 2267  docker run -dit -v $(pwd)/storage:/internal_storage alpine /bin/sh
+ 2268  docker ps
+ 2269  docker exec -it CONTAINER-ID /bin/sh -c `ls -l /`
+ 2270  docker exec -it 3e0fe0846f89 /bin/sh -c `ls -l /`
+ 2271  docker exec -it 3e0fe0846f89 /bin/sh -c ls -l 
+ 2272  docker exec -it 3e0fe0846f89 /bin/sh -- /bin/sh
+ 2273  docker exec -it 3e0fe0846f89 /bin/sh -- /bin/bash
+ 2274  docker exec -it 3e0fe0846f89 /bin/sh -- /bin/
+ 2275  docker exec -it 3e0fe0846f89 /bin/sh
+ 2276  ll /var/lib/docker-desktop/mounts.data 
+ 2277  ll
+ 2278  ll storage/
+ 2279  docker run -p 6000 nginx 
+ 2280  docker run -it -p 6000 nginx 
+ 2281  docker ps
+ 2282  docker run -d -p 6000 nginx 
+ 2283  docker ps
+ 2284  docker exec -it f554113ab78e -p 6000 /bin/bash
+ 2285  docker exec -it f554113ab78e -port 6000 /bin/bash
+ 2286  docker exec -it -p 6000 f554113ab78e /bin/bash
+ 2287  docker exec -it f554113ab78e -p 80:6000 /bin/bash
+ 2288  docker exec -it f554113ab78e /bin/bash
+ 2289  docker inspect f554113ab78e
+ 2290  docker inspect f554113ab78e | grep -i ip
+ 2291  curl 172.17.0.3:6000
+ 2292  curl 127.0.0.1:6000
+ 2293  docker run -d -P nginx 
+ 2294  docker inspect a06390612d4a0d5335a4d2f7a3a8f431abddb92e306b9e61131aec7de1a7c797
+ 2295  curl 172.17.0.4:32768
+ 2296  docker ps
+ 2297  127.0.0.1"32768
+ 2298  127.0.0.1:32768
+ 2299  curl 127.0.0.1:32768
+ 2300  ll /usr/share/nginx/html/index.html 
+ 2301  cat /usr/share/nginx/html/index.html 
+ 2302  ll
+ 2303  ll ../html/index.html 
+ 2304  cat ../html/index.html 
+ 2305  docker run -d -v ~/projects/docker/html/index.html:/usr/share/nginx/html nginx 
+ 2306  docker run -dit -v ~/projects/docker/html/index.html:/usr/share/nginx/html nginx 
+ 2307  docker run -dit -v $(pwd)/../html/index.html:/usr/share/nginx/html nginx 
+ 2308  docker ps
+ 2309  docker stop a06390612d4a f554113ab78e 3e0fe0846f89 
+ 2310  docker delete a06390612d4a f554113ab78e 3e0fe0846f89 
+ 2311  docker remove a06390612d4a f554113ab78e 3e0fe0846f89 
+ 2312  docker ps
+ 2313  docker run -dit -v $(pwd)/../html/index.html:/usr/share/nginx/html nginx 
+ 2314  docker run -dit -v $(pwd)/../html/index.html:usr/share/nginx/html nginx 
+ 2315  docker run -dit -v $(pwd)/../html/index.html:/usr/share/nginx/html nginx 
+ 2316  docker run -dit -v $(pwd)../html/index.html:/usr/share/nginx/html nginx 
+ 2317  docker ps
+ 2318  curl 127.0.0.1:80
+ 2319  docker run -dit -P -v $(pwd)../html/index.html:/usr/share/nginx/html nginx 
+ 2320  docker ps
+ 2321  curl 127.0.0.1:32769

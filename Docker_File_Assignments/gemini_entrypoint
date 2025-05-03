@@ -1,0 +1,4 @@
+FROM alpine  
+
+ENTRYPOINT ["echo", "The main program says:"]
+CMD ["Hello", "from", "CMD"]
